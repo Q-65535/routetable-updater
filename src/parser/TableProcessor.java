@@ -63,6 +63,20 @@ public class TableProcessor {
 						iter.remove();
 						sb.append(MessageEntry.encode(curNewMessage));
 					}
+				} else {
+					// match date pattern
+					// @Smell: duplicate code
+					DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy.MM.dd");
+					LocalDateTime now = LocalDateTime.now();
+					String date = dtf.format(now);
+					Pattern datePattern = Pattern.compile("(2\\d{3}\\.(0[1-9]|1[0-2])\\.(0[1-9]|[12]\\d|3[01]))");
+					Matcher matcher = datePattern.matcher(line);
+
+					if (matcher.find()) {
+						System.out.println("found date matching string");
+						String found = matcher.group();
+						line = line.replace(found, date);
+					}
 				}
 
 				// @Note: readline() doesn't contain line-termination chars, so we need

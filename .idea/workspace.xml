@@ -5,38 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03328b56-9497-43a0-99c4-43ed5cbcc3b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_3_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/can_gateway_cfg.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/can_gateway_routetable.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config_result.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/apiguardian-api-1.1.2-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/apiguardian-api-1.1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-3.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-5.8.1-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-5.8.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-api-5.8.1-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-api-5.8.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.8.1-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.8.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-params-5.8.1-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-params-5.8.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-commons-1.8.1-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-commons-1.8.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-engine-1.8.1-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-engine-1.8.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/opentest4j-1.2.0-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/opentest4j-1.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parser/ParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parser/TableVersionEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/table_result.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_messages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/new_messages.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/route-table-updater.iml" beforeDir="false" afterPath="$PROJECT_DIR$/route-table-updater.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parser/MessageEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parser/MessageEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/can_gateway_routetable.h" beforeDir="false" afterPath="$PROJECT_DIR$/can_gateway_routetable.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parser/TableProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parser/TableProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/table.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,12 +133,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1694195734613</updated>
-      <workItem from="1694195735679" duration="29912000" />
+      <workItem from="1694195735679" duration="30558000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
