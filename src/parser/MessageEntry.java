@@ -11,7 +11,11 @@ public class MessageEntry {
 	short delay_count;
 
 	public boolean isPeriodic() {
-		return true;
+		if ((tag_info[3] & 0x40) != 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	public boolean isDiagnosic() {
@@ -77,7 +81,7 @@ public class MessageEntry {
 		String firstTag = "0x" + String.format("%1$02X",messageEntry.tag_info[0]);
 		sb.append(firstTag);
 		for (int i = 1; i < 8; i++) {
-			String tag = ",0x" + String.format("%1$01X",messageEntry.delay_def[i]);
+			String tag = ",0x" + String.format("%1$02X",messageEntry.delay_def[i]);
 			sb.append(tag);
 		}
 		sb.append("},");

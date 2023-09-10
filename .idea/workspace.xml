@@ -5,19 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03328b56-9497-43a0-99c4-43ed5cbcc3b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new_messages.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/route-table-updater.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parser/EntryParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parser/MessageEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parser/TableProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/table.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_3_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/can_gateway_cfg.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/can_gateway_routetable.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config_result.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/apiguardian-api-1.1.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/apiguardian-api-1.1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-3.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-5.8.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-5.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-api-5.8.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-api-5.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.8.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-params-5.8.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-params-5.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-platform-commons-1.8.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-platform-commons-1.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-platform-engine-1.8.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-platform-engine-1.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/opentest4j-1.2.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/opentest4j-1.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/parser/ParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/parser/TableVersionEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/table_result.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_messages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/new_messages.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/route-table-updater.iml" beforeDir="false" afterPath="$PROJECT_DIR$/route-table-updater.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parser/MessageEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parser/MessageEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parser/TableProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parser/TableProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/table.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,15 +64,24 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/wudi/Documents/repos/route-table-updater/lib/junit-3.7.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -62,7 +90,7 @@
       <command value="Main" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="route-table-updater" />
@@ -70,9 +98,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ParserTest.hexRegTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="route-table-updater" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="parser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="parser" />
+      <option name="MAIN_CLASS_NAME" value="parser.ParserTest" />
+      <option name="METHOD_NAME" value="hexRegTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParserTest.regTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="route-table-updater" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="parser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="parser" />
+      <option name="MAIN_CLASS_NAME" value="parser.ParserTest" />
+      <option name="METHOD_NAME" value="regTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParserTest.unSignedRegTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="route-table-updater" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="parser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="parser" />
+      <option name="MAIN_CLASS_NAME" value="parser.ParserTest" />
+      <option name="METHOD_NAME" value="unSignedRegTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ParserTest.unSignedRegTest" />
+        <item itemvalue="JUnit.ParserTest.hexRegTest" />
+        <item itemvalue="JUnit.ParserTest.regTest" />
       </list>
     </recent_temporary>
   </component>
@@ -84,7 +163,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1694195734613</updated>
-      <workItem from="1694195735679" duration="17730000" />
+      <workItem from="1694195735679" duration="29912000" />
     </task>
     <servers />
   </component>
@@ -93,5 +172,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/parser/TableVersionEntry.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

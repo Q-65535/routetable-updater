@@ -4,14 +4,16 @@ import java.io.*;
 import java.util.*;
 import java.time.*;
 import java.time.format.*;
+import java.util.regex.*;
 
 public class TableProcessor {
 	File table;
 	File config;
 	File newMessagesFile;
 
-	public TableProcessor(String targetPath, String newMessagesPath) {
-		table = new File(targetPath);
+	public TableProcessor(String tablePath, String configPath, String newMessagesPath) {
+		table = new File(tablePath);
+		config = new File(configPath);
 		newMessagesFile = new File(newMessagesPath);
 	}
 
@@ -87,20 +89,85 @@ public class TableProcessor {
 			}
 			sb.append(MessageEntry.encode(curMessage));
 		}
+		br.close();
 
 		// write the result to file
-		BufferedWriter writer = new BufferedWriter(new FileWriter("result.txt"));
+		BufferedWriter writer = new BufferedWriter(new FileWriter("table_result.h"));
 		writer.write(sb.toString());
 		writer.close();
 
+		changeConfig(curDelayIndex + curDelayCount, finalNewMessagesCount);
+	}
 
-		// dealing with config file
+	// dealing with config file
+	private void changeConfig(int nextDelayIndex, int newMessageCount) throws IOException {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy.MM.dd");
 		LocalDateTime now = LocalDateTime.now();
-		System.out.println(dtf.format(now));
+		String date = dtf.format(now);
 
-		int send_queue_max_num0 = curDelayIndex + curDelayIndex + 16;
-		int table_id_max_num = 0 + finalNewMessagesCount;
+		StringBuilder sb = new StringBuilder();
+		int send_queue_max_num0; 
+		int table_id_max_num; 
+		FileReader fr = new FileReader(config);
+		BufferedReader br = new BufferedReader(fr);
+
+		String line;
+		while ((line = br.readLine()) != null) {
+			// match date pattern
+			Pattern datePattern = Pattern.compile("(2\\d{3}\\.(0[1-9]|1[0-2])\\.(0[1-9]|[12]\\d|3[01]))");
+			Matcher matcher = datePattern.matcher(line);
+
+
+			if (matcher.find()) {
+				System.out.println("found date matching string");
+				String found = matcher.group();
+				line = line.replace(found, date);
+			// 内部发送缓存深度
+			} else if (line.contains("CAN_GATEWAY_SEND_QUEUE_MAX_NUM0")) {
+				System.out.println("found can gateway send queue variable");
+				Pattern hexPattern = Pattern.compile("0x..");
+				matcher = hexPattern.matcher(line);
+				if (matcher.find()) {
+					String found = matcher.group();
+					int can_gateway_max_num = Integer.decode(found);
+					// if (can_gateway_max_num - nextDelayIndex <= 8) {
+						can_gateway_max_num = nextDelayIndex + 16;
+					// }
+					String can_gateway_max_num_str = "0x" + String.format("%1$02X",can_gateway_max_num);
+					line = line.replace(found, can_gateway_max_num_str);
+				}
+			// 路由表最大数量
+			} else if (line.contains("CAN_ROUTE_TABLE_ID_MAX_NUM")) {
+				System.out.println("found can routable number variable");
+				Pattern hexPattern = Pattern.compile("0x..");
+				matcher = hexPattern.matcher(line);
+				if (matcher.find()) {
+					String found = matcher.group();
+					int can_table_max_num = Integer.decode(found);
+					can_table_max_num += newMessageCount;
+					String can_table_max_num_str = "0x" + String.format("%1$02X",can_table_max_num);
+					line = line.replace(found, can_table_max_num_str);
+				}
+			} else if (line.contains("GATEWAY_ROUTE_TABLE_VERSION")) {
+				Pattern versionPattern = Pattern.compile("\\{.*}");
+				matcher = versionPattern.matcher(line);
+				if (matcher.find()) {
+					String found = matcher.group();
+					TableVersionEntry tve = TableVersionEntry.decode(found);
+					tve.update();
+					int startIndex = matcher.start();
+					int endIndex = matcher.end();
+					line = line.substring(0, startIndex) + tve.encode() + line.substring(endIndex, line.length());
+				}
+			}
+			sb.append(line + "\n");
+		}
+		br.close();
+
+		// write the result to file
+		BufferedWriter writer = new BufferedWriter(new FileWriter("config_result.h"));
+		writer.write(sb.toString());
+		writer.close();
 	}
 
 	private boolean isEntry(String line) {

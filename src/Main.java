@@ -17,7 +17,7 @@ public class Main {
 		MessageEntry.encode(me);
 
         try {
-            TableProcessor tp = new TableProcessor("table.h", "new_messages.txt");
+            TableProcessor tp = new TableProcessor("can_gateway_routetable.h", "can_gateway_cfg.h", "new_messages.txt");
             tp.process();
         } catch (IOException e) {
             throw new RuntimeException(e);
